@@ -1,0 +1,22 @@
+load("@pypi//:requirements.bzl", "requirement")
+
+filegroup(
+    name = "allsrc",
+    srcs = glob(["*.py",]),
+)
+
+py_binary(
+    name = "metadata",
+    srcs = [
+        "__init__.py",
+        "metadata.py",
+    ],
+    deps = [
+        requirement("pandas"),
+        "@rules_python//python/runfiles",
+    ],
+    data = [
+        "annual-enterprise-survey-2023-financial-year-provisional.csv",
+    ],
+    visibility = ["//visibility:public"],
+)
