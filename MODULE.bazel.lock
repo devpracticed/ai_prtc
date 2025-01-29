@@ -2389,7 +2389,7 @@
         "recordedFileInputs": {
           "@@rules_python~//tools/publish/requirements_linux.txt": "d576e0d8542df61396a9b38deeaa183c24135ed5e8e73bb9622f298f2671811e",
           "@@rules_fuzzing~//fuzzing/requirements.txt": "ab04664be026b632a0d2a2446c4f65982b7654f5b6851d2f9d399a19b7242a5b",
-          "@@//requirements.txt": "783d0fb2330737fa9778e8154de8485577682ffcfb686a99f8f3b88caa23198a",
+          "@@//requirements.txt": "5a6f361ad6369f502ccfe59d6eb808c69c2eeb1c151ec9d209e99f0b6fe19c01",
           "@@rules_python~//tools/publish/requirements_windows.txt": "d18538a3982beab378fd5687f4db33162ee1ece69801f9a451661b1b64286b76",
           "@@protobuf~//python/requirements.txt": "983be60d3cec4b319dcab6d48aeb3f5b2f7c3350f26b3a9e97486c37967c73c5",
           "@@rules_python~//tools/publish/requirements_darwin.txt": "095d4a4f3d639dce831cd493367631cd51b53665292ab20194bac2c0c6458fa8"
@@ -3553,6 +3553,16 @@
               "python_interpreter_target": "@@rules_python~~python~python_3_11_host//:python",
               "repo": "pypi_311",
               "requirement": "zipp==3.17.0"
+            }
+          },
+          "pypi_311_seaborn": {
+            "bzlFile": "@@rules_python~//python/private/pypi:whl_library.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "python_interpreter_target": "@@rules_python~~python~python_3_11_host//:python",
+              "repo": "pypi_311",
+              "requirement": "seaborn==0.13.2"
             }
           },
           "pypi_311_terminado": {
@@ -6442,6 +6452,7 @@
                 "s3transfer": "{\"pypi_311_s3transfer\":[{\"version\":\"3.11\"}]}",
                 "scikit_learn": "{\"pypi_311_scikit_learn\":[{\"version\":\"3.11\"}]}",
                 "scipy": "{\"pypi_311_scipy\":[{\"version\":\"3.11\"}]}",
+                "seaborn": "{\"pypi_311_seaborn\":[{\"version\":\"3.11\"}]}",
                 "send2trash": "{\"pypi_311_send2trash\":[{\"version\":\"3.11\"}]}",
                 "six": "{\"pypi_311_six\":[{\"version\":\"3.11\"}]}",
                 "sniffio": "{\"pypi_311_sniffio\":[{\"version\":\"3.11\"}]}",
@@ -6574,6 +6585,7 @@
                 "s3transfer",
                 "scikit_learn",
                 "scipy",
+                "seaborn",
                 "send2trash",
                 "six",
                 "sniffio",

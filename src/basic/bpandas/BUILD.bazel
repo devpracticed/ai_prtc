@@ -13,6 +13,9 @@ py_binary(
     ],
     deps = [
         requirement("pandas"),
+        requirement("Jinja2"),
+        requirement("seaborn"),
+        requirement("matplotlib"),
         "@rules_python//python/runfiles",
     ],
     data = [
